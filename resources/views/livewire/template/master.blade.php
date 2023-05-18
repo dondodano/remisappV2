@@ -14,6 +14,32 @@
 
     @yield('contents')
 
+    <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+    <script>
+        var pusher = new Pusher('b9a98d5d52ec6269f87b', {
+            cluster: 'ap1'
+        });
+        var channel = pusher.subscribe('notification-channel');
+        channel.bind('notification-event', function(data) {
+            if(data)
+            {
+                if(data.message == 'NewNotification')
+                {
+                    Livewire.emit('NewNotification')
+                }
+
+                if(data.message == 'UserOnlineStatus')
+                {
+                    Livewire.emit('UserOnlineStatus')
+                }
+            }
+        });
+
+        window.addEventListener('reloadComponent', event => {
+            location.reload();
+        })
+
+    </script>
     @stack('bodyComponents')
 </body>
 </html>
