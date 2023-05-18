@@ -8,9 +8,12 @@
     <meta name="description" content="SPAMAST REMIS" />
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
     @vite('resources/css/app.css')
+    @livewireStyles
     @stack('topComponents')
 </head>
 <body>
+
+    @livewire('components.flash-offline')
 
     @yield('contents')
 
@@ -38,8 +41,8 @@
         window.addEventListener('reloadComponent', event => {
             location.reload();
         })
-
     </script>
+    @livewireScripts
     @stack('bodyComponents')
 </body>
 </html>
