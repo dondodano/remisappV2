@@ -1,0 +1,42 @@
+git init
+git add "README.md"
+git commit -m "First Commit"
+git remote add origin https://github.com/dondodano/remisapp.git
+git push -u origin master
+
+
+Pushing file to git hub
+
+git add "README.md"
+git commit -m "First Commit"
+git push -u origin master
+
+# CRON Job for queue:work
+cd /public_html/remis.dpanel.site
+php artisan queue:work --stop-when-empty
+
+/usr/local/bin/php /home/enkybmuf/public_html/remis.dpanel.site/php artisan queue:work --stop-when-empty
+
+# For htaccess on PRODUCTION
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Migrate specific file
+php artisan migrate --path=/database/migrations/2023_04_14_092809_create_failed_jobs_table.php
+
+# Refresh Laravel IDE helper
+php artisan ide-helper:generate
+php artisan ide-helper:models
+
+
+# Last Action (04-29-2023)
+require review on User creation and alteration
+Email during creation and alteration should be unique
+Make relationships for PasswordReset model
+
+# Last Action (05-10-2023)
+Add multiple user role and switch between roles
+Optimize Role for RDE office admin
