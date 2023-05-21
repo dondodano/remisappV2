@@ -7,9 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Events\\PusherNotificationEvent' => $baseDir . '/app/Events/PusherNotificationEvent.php',
+    'App\\Events\\SendMailUserCredentialEvent' => $baseDir . '/app/Events/SendMailUserCredentialEvent.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Livewire\\Components\\FlashOffline' => $baseDir . '/app/Http/Livewire/Components/FlashOffline.php',
+    'App\\Http\\Livewire\\Sample\\Index' => $baseDir . '/app/Http/Livewire/Sample/Index.php',
+    'App\\Http\\Livewire\\Template\\Master' => $baseDir . '/app/Http/Livewire/Template/Master.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => $baseDir . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
@@ -19,6 +24,8 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\ValidateSignature' => $baseDir . '/app/Http/Middleware/ValidateSignature.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Listeners\\SendMailUserCredentialListener' => $baseDir . '/app/Listeners/SendMailUserCredentialListener.php',
+    'App\\Mail\\UserCredentialMailer' => $baseDir . '/app/Mail/UserCredentialMailer.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

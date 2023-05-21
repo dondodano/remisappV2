@@ -703,9 +703,14 @@ class ComposerStaticInit062a5d49149bb457c354cd822c573a3c
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Events\\PusherNotificationEvent' => __DIR__ . '/../..' . '/app/Events/PusherNotificationEvent.php',
+        'App\\Events\\SendMailUserCredentialEvent' => __DIR__ . '/../..' . '/app/Events/SendMailUserCredentialEvent.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Livewire\\Components\\FlashOffline' => __DIR__ . '/../..' . '/app/Http/Livewire/Components/FlashOffline.php',
+        'App\\Http\\Livewire\\Sample\\Index' => __DIR__ . '/../..' . '/app/Http/Livewire/Sample/Index.php',
+        'App\\Http\\Livewire\\Template\\Master' => __DIR__ . '/../..' . '/app/Http/Livewire/Template/Master.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
@@ -715,6 +720,8 @@ class ComposerStaticInit062a5d49149bb457c354cd822c573a3c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Listeners\\SendMailUserCredentialListener' => __DIR__ . '/../..' . '/app/Listeners/SendMailUserCredentialListener.php',
+        'App\\Mail\\UserCredentialMailer' => __DIR__ . '/../..' . '/app/Mail/UserCredentialMailer.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
